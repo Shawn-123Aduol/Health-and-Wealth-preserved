@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+  <header>
+    <h1>HEALTH AND WEALTH PRESERVED</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="supplementary.html">Supplementary</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="freshness.html">Freshness</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <form id="signupForm" onsubmit="return validateForm()">
+    <div class="login-container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+      <br><br>
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" id="email" required>
+      <br><br>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      <br><br>
+      <button type="submit">Sign Up</button>
+    </div>
+  </form>
+
+  <script>
+    function validateForm() {
+      var uname = document.getElementById("uname").value;
+      var email = document.getElementById("email").value;
+      var psw = document.getElementById("psw").value;
+
+      if (uname === "" || email === "" || psw === "") {
+        alert("All fields must be filled out");
+        return false;
+      }
+
+      // You can add more complex validation here if needed
+
+      return true;
+    }
+  </script>
+</body>
+</html>
